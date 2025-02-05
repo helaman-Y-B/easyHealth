@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    background-color: #E0F7FA;
+}
+
+h1 {
+    margin: 25px;
+}
+
+h2 {
+    color: #263238;
+}
+
+h3 {
+    color: #263238;
+}
+
+p {
+    color: #263238;
+}
+
+header {
+    display: flex;
+    margin: 0;
+}
+
+header img {
+    max-width: 50px;
+}
+
+header button {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+#presentation {
+    max-width: 1200px;
+    background-color: #FF5722;
+}
+
+#presentation img {
+    width: 100vw;
+}
+
+#purpouse {
+    padding: 5px;
+}
+
+#catalog {
+    display: grid;
+}
+
+.fruit-banner {
+    margin: 10px;
+    background-color: #FF5722;
+}
+
+footer {}
