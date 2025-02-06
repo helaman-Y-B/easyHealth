@@ -80,3 +80,49 @@ footer {
     padding: 10px;
     background-color: #009688;
 }
+
+/* Fruit CSS page */
+
+#fruit {
+    background-color: #009688;
+    margin: 5px;
+    border: solid 10px;
+    border-color: #FF5722;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+#fruit-facts {
+    min-width: 85vw;
+    background-color: #FF5722;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#place-order {
+    width: 85vw;
+    padding: 15px;
+    margin: 25px auto 25px auto;
+}
+
+.quantity-box {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.quantity-box button {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.quantity-box input {
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 5px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Easy Health</title>
+</head>
+<body>
+    <header>
+        <img src="https://placehold.co/100x100" alt="logo">
+        <h1>Easy Health</h1>
+        <button>Wish list</button>
+        <button>cart</button>
+    </header>
+
+    <div id="fruit">
+        <h2 class="fruit-header">Fruit Name</h2>
+        <img src="" alt="Fruit image">
+        <div id="fruit-facts">
+            <h3>FACS</h3>
+            <p>This fruit is awesome because of...</p>
+        </div>
+
+        <div class="quantity-box">
+            <button class="decrease" onclick="changeQuantity(-1)">-</button>
+            <input type="number" id="quantity" value="1" min="1">
+            <button class="increase" onclick="changeQuantity(1)">+</button>
+        </div>
+        <button id="place-order">Put it to cart</button>
+    </div>
+
+</body>
+<footer>
+    <div id="author-footer">
+        <p>Author: Helamã Y. Barbour</p>
+        <p>&copy;NOT a real business</p>
+        <p>A BYU Project</p>
+    </div>
+    <div id="midia-footer">
+        <img src="https://placehold.co/50x50" alt="Facebook logo">
+        <img src="https://placehold.co/50x50" alt="Instagram logo">
+    </div>
+</footer>
+</html>
