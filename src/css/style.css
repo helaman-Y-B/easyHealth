@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 body {
     margin: 0;
     background-color: #E0F7FA;
@@ -5,21 +7,26 @@ body {
 
 h1 {
     margin: 25px;
+    font-family: "Lato", serif;
 }
 
 h2 {
     color: #263238;
+    font-family: "Lato", serif;
 }
 
 h3 {
     color: #263238;
+    font-family: "Lato", serif;
 }
 
 p {
     color: #263238;
+    font-family: "PT Sans", serif;
 }
 
 header {
+    background-color: #009688;
     display: flex;
     margin: 0;
 }
@@ -48,12 +55,28 @@ header button {
 }
 
 #catalog {
-    display: grid;
+    display: flexbox;
 }
 
 .fruit-banner {
+    padding: 25px;
     margin: 10px;
     background-color: #FF5722;
 }
 
-footer {}
+.fruit-banner img {
+    margin: auto;
+}
+
+.fruit-header {
+    text-align: center;
+}
+
+.fruit-facs {
+    text-align: center;
+}
+
+footer {
+    padding: 10px;
+    background-color: #009688;
+}
