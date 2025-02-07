@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-    margin: 25px;
+    margin: auto;
     font-family: "Lato", serif;
 }
 
@@ -28,17 +28,21 @@ p {
 header {
     background-color: #009688;
     display: flex;
-    margin: 0;
 }
 
 header img {
-    max-width: 50px;
+    max-height: max-content;
+
 }
 
 header button {
     width: 35px;
     height: 35px;
-    margin: 5px;
+    margin: auto;
+}
+
+header a {
+    margin: auto;
 }
 
 #presentation {
@@ -182,14 +186,12 @@ footer {
 }
 
 form {
-    border: 10px solid #FF5722;
-    border-radius: 10px;
     margin: 2vw;
-    background-color: #FF5722;
 }
 
 fieldset {
     background-color: #009688;
+    border-radius: 10px;
 }
 
 input {
