@@ -8,14 +8,14 @@
         /* Two banners per row on medium screens */
     }
 
+    /* Fruit CSS page */
+
     #fruit-image {
         width: 480px;
-        /* Ensure width is set to 100% */
     }
 
     #fruit-facts {
         width: 100%;
-        /* Ensure width is set to 100% */
     }
 }
 
@@ -206,12 +206,14 @@ quantity-box button {
     border-radius: 10px;
     padding: 5px;
     max-width: 50vw;
-    margin-left: 5px;
+    margin: 20px auto 20px 5vw;
 }
 
 #cart-list {
+    max-width: 1000px;
     display: flex;
     flex-direction: column;
+    margin: auto;
 }
 
 .products {
