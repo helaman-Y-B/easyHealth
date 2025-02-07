@@ -7,6 +7,16 @@
         flex: 1 1 calc(50% - 20px);
         /* Two banners per row on medium screens */
     }
+
+    #fruit-image {
+        width: 480px;
+        /* Ensure width is set to 100% */
+    }
+
+    #fruit-facts {
+        width: 100%;
+        /* Ensure width is set to 100% */
+    }
 }
 
 @media (min-width: 900px) {
@@ -119,33 +129,45 @@ footer {
 /* Fruit CSS page */
 
 #fruit {
-    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #009688;
-    margin: 5px;
+    max-width: 600px;
+    margin: 5px auto 5px auto;
+    padding: 10px;
     border: solid 10px;
     border-color: #FF5722;
     border-radius: 10px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
 }
 
 #fruit-image {
-    min-width: 86vw;
-    max-width: 1000px;
+    min-width: 328px;
+    max-width: 480px;
+    width: 80vw;
 }
 
 #fruit-facts {
-    min-width: 84vw;
+    min-width: 328px;
+    max-width: 480px;
+    width: 80vw;
     background-color: #FF5722;
-    padding: 5px;
     border-radius: 0px 0px 10px 10px;
-    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+#fruit-facts h3 {
+    margin: 5px;
+}
+
+#fruit-facts p {
+    margin: 5px;
 }
 
 #place-order {
     background-color: #FF5722;
-    width: 84vw;
+    min-width: 328px;
     padding: 15px;
     margin: 25px auto 25px auto;
 }
