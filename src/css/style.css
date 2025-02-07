@@ -171,3 +171,35 @@ footer {
     padding: 15px;
     margin: 25px auto 25px auto;
 }
+
+/*buy-form CSS page*/
+
+#submit-form {
+    font-family: "PT Sans", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form {
+    border: 10px solid #FF5722;
+    border-radius: 10px;
+    margin: 2vw;
+    background-color: #FF5722;
+}
+
+fieldset {
+    background-color: #009688;
+}
+
+input {
+    width: -webkit-fill-available;
+    height: 7vw;
+}
+
+#buy-btn {
+    background-color: #FF5722;
+    width: 80vw;
+    padding: 15px;
+    margin: 25px auto 25px auto;
+}

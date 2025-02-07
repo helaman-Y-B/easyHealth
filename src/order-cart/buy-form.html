@@ -13,19 +13,36 @@
         <button>Wish list</button>
         <button>cart</button>
     </header>
-    <form action="" target="_blank" method="post">
-        <fieldset>
-            <legend>Name</legend>
-            <label for="fname">First Name:</label><br>
-            <input type="text" id="fname" name="fname"><br>
-            <label for="lname">Last Name:</label><br>
-            <input type="text" id="lname" name="lname"><br>
-        </fieldset>
-        <fieldset>
-            
-        </fieldset>
-        <button type="button" onclick="alert('Order Submitted')">Place Order</button>
-    </form>
+    <div id="submit-form">
+        <form action="" target="_blank" method="post">
+            <fieldset>
+                <legend>Name:</legend>
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Address:</legend>
+                <label for="state">State:</label><br>
+                <input type="text" id="state" name="state"><br>
+                <label for="street">Street:</label><br>
+                <input type="text" id="street" name="street"><br>
+                <label for="zip">ZIP Code:</label><br>
+                <input type="text" id="zip" name="zip"><br>
+            </fieldset>
+            <fieldset>
+                <legend>Card Information:</legend>
+                <label for="card-num">Card Number:</label><br>
+                <input type="text" id="card-num" name="card-num"><br>
+                <label for="expiration">Expiration Date:</label><br>
+                <input type="text" id="expiration" name="expiration"><br>
+                <label for="ccv">CCV:</label><br>
+                <input type="text" id="ccv" name="ccv"><br>
+            </fieldset>
+        </form>
+        <button id="buy-btn" type="button" onclick="alert('Order Submitted')">Place Order</button>    
+    </div>
     
 
 </body>
