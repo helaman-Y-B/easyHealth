@@ -25,6 +25,10 @@
     #fruit-facts {
         width: 100%;
     }
+
+    #presentation {
+        border-radius: 10px;
+    }
 }
 
 @media (min-width: 900px) {
@@ -114,7 +118,6 @@ header a {
     margin: auto;
     max-width: 1000px;
     background-color: #FF5722;
-    border-radius: 10px;
 }
 
 .main-image {
@@ -185,7 +188,6 @@ header a {
 
 .fruit-banner {
     flex: 1 1 calc(100% - 20px);
-    /* Full width on small screens */
     box-sizing: border-box;
     padding: 15px;
     margin: 10px;
