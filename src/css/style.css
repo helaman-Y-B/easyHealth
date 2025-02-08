@@ -78,6 +78,24 @@ header a {
     margin: auto;
 }
 
+#favIcon {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+}
+
+#cart-icon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+#wishlist-icon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
 #presentation {
     margin: auto;
     max-width: 1000px;
@@ -138,6 +156,12 @@ footer {
 #midia-footer {
     max-width: 800px;
     margin: auto;
+}
+
+.midia-icon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
 }
 
 /* Fruit CSS page */
