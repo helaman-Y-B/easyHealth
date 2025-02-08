@@ -12,6 +12,10 @@
         flex: 1 1 calc(50% - 20px);
     }
 
+    .main-image {
+        height: 50vw;
+    }
+
     /* Fruit CSS page */
 
     #fruit-image {
@@ -27,6 +31,11 @@
 
     .fruit-banner {
         flex: 1 1 calc(33.33% - 20px);
+    }
+
+    .main-image {
+        max-width: 1000px;
+        max-height: 500px;
     }
 }
 
