@@ -26,7 +26,6 @@
 }
 
 body {
-    max-width: 1000px;
     margin: auto;
     background-color: #E0F7FA;
     justify-content: center;
@@ -56,7 +55,12 @@ p {
 
 header {
     background-color: #009688;
+}
+
+#header-div {
     display: flex;
+    max-width: 1000px;
+    margin: auto;
 }
 
 header img {
@@ -75,6 +79,7 @@ header a {
 }
 
 #presentation {
+    margin: auto;
     max-width: 1000px;
     background-color: #FF5722;
     border-radius: 10px;
@@ -123,6 +128,16 @@ header a {
 footer {
     padding: 10px;
     background-color: #009688;
+}
+
+#author-footer {
+    max-width: 800px;
+    margin: auto;
+}
+
+#midia-footer {
+    max-width: 800px;
+    margin: auto;
 }
 
 /* Fruit CSS page */
