@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Easy Health</title>
+</head>
+
+<body>
+    <header>
+        <div id="header-div">
+            <img id="favIcon" src="../public/img/easyHealthIcon.png" alt="logo">
+            <h1>Easy Health</h1>
+            <a href="../favorite-page/favorites.html"><img id="wishlist-icon" src="../public/img/star.png"
+                    alt="wishlist icon"></a>
+            <a href="../cart/cart.html"><img id="cart-icon" src="../public/img/cart.png" alt="cart icon"></a>
+        </div>
+    </header>
+    <div id="submit-form">
+        <form action="" target="_blank" method="post">
+            <fieldset>
+                <legend>Name:</legend>
+                <label for="fname">First Name:</label><br>
+                <input type="text" id="fname" name="fname" required><br>
+                <label for="lname">Last Name:</label><br>
+                <input type="text" id="lname" name="lname" required><br>
+            </fieldset>
+            <fieldset>
+                <legend>Address:</legend>
+                <label for="state">State:</label><br>
+                <input type="text" id="state" name="state" required><br>
+                <label for="street">Street:</label><br>
+                <input type="text" id="street" name="street" required><br>
+                <label for="zip">ZIP Code:</label><br>
+                <input type="text" id="zip" name="zip" required><br>
+            </fieldset>
+            <fieldset>
+                <legend>Card Information:</legend>
+                <label for="card-num">Card Number:</label><br>
+                <input type="text" id="card-num" name="card-num" required><br>
+                <label for="expiration">Expiration Date:</label><br>
+                <input type="text" id="expiration" name="expiration" required><br>
+                <label for="ccv">CCV:</label><br>
+                <input type="text" id="ccv" name="ccv" required><br>
+            </fieldset>
+        </form>
+        <button id="buy-btn" type="button" onclick="alert('Order Submitted')">Place Order</button>
+    </div>
+
+
+</body>
+<footer>
+    <div id="author-footer">
+        <p>Author: Helamã Y. Barbour</p>
+        <p>&copy;NOT a real business</p>
+        <p>A BYU Project</p>
+    </div>
+    <div id="midia-footer">
+        <img class="midia-icon" src="../public/img/facebook.png" alt="Facebook logo">
+        <img class="midia-icon" src="../public/img/instagram.png" alt="Instagram logo">
+    </div>
+</footer>
+
+</html>
