@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 /* Medias for screen sizes */
 
 @media (min-width: 600px) {
@@ -106,7 +111,7 @@ header a {
 .main-image {
     margin: 0 auto;
     width: 100vw;
-    height: 700px;
+    height: 70vw;
     overflow: hidden;
     position: relative;
 }
@@ -122,11 +127,24 @@ header a {
     -o-transition: all ease-in-out 1s;
 }
 
+.main-image #imgban3 {
+    background-image: url(../public/img/imgban3.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 1000px;
+    width: 100vw;
+    max-height: 100%;
+}
+
 .main-image #imgban2 {
     background-image: url(../public/img/imgban2.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    max-width: 1000px;
+    width: 100vw;
+    max-height: 100%;
 }
 
 .main-image #imgban1 {
@@ -134,6 +152,9 @@ header a {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    max-width: 1000px;
+    width: 100vw;
+    max-height: 100%;
 }
 
 #presentation img {
