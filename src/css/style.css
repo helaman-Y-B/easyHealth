@@ -281,3 +281,34 @@ input {
     padding: 15px;
     margin: 25px auto 25px auto;
 }
+
+/* Favorite CSS page */
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    background-color: #E0F7FA;
+    margin: auto;
+}
+
+#favorite-header {
+    background-color: #FF5722;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px auto 20px 2vw;
+}
+
+#favorite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #009688;
+    max-width: 600px;
+    margin: 5px auto 5px auto;
+    padding: 10px;
+    border: solid 10px;
+    border-color: #FF5722;
+    border-radius: 10px;
+}
