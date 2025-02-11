@@ -1,13 +1,15 @@
 // Currently, the API does not support CORS, so I am using a proxy to bypass this issue
-const url = "https://cors-anywhere.herokuapp.com/https://www.fruityvice.com/api/fruit/all";
+const urlFruit = "https://cors-anywhere.herokuapp.com/https://www.fruityvice.com/api/fruit/all";
+//const urlImage = `https://www.fruityvice.com/api/fruit/${fruit.name}/image`;
 
 export async function getFruits() {
-    const res = await fetch(url);
+    const res = await fetch(urlFruit);
 
     if (!res.ok) {
         throw new Error('Network response was not ok');
     } else {
-        return await res.json();
+        const data = await res.json();
+        return data;
     }
 }
 
