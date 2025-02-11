@@ -25,7 +25,7 @@ export function createBlock(fruit) {
     // Create a paragraph element and add the class fruit-facts to it
     const paragraph = document.createElement("p");
     paragraph.classList.add("fruit-facts");
-    paragraph.innerHTML = `Nutritions: ${JSON.stringify(fruit.nutritions)}`;
+    paragraph.innerHTML = `Nutritions:<br>Carbohydrates: ${JSON.stringify(fruit.nutritions.carbohydrates)}<br>Fat: ${JSON.stringify(fruit.nutritions.fat)}<br>Protein: ${JSON.stringify(fruit.nutritions.protein)}<br>Calories: ${JSON.stringify(fruit.nutritions.calories)}<br>Sugar: ${JSON.stringify(fruit.nutritions.sugar)}`;
 
     // Append the image, header, and paragraph to the fruitBanner div
     fruitBanner.appendChild(img);

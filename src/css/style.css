@@ -200,7 +200,8 @@ header a {
     padding: 15px;
     margin: 10px;
     background-color: #FF5722;
-    max-width: 300px;
+    min-width: 300px;
+    max-width: 500px;
 }
 
 .fruit-banner img {
