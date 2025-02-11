@@ -7,10 +7,7 @@ export async function getFruits() {
     if (!res.ok) {
         throw new Error('Network response was not ok');
     } else {
-
-        const data = await res.json();
-        console.log(data);
-        return data;
+        return await res.json();
     }
 }
 

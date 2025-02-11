@@ -187,12 +187,16 @@ header a {
 }
 
 .fruit-banner {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 calc(100% - 20px);
+    text-align: center;
+    align-items: center;
     box-sizing: border-box;
     padding: 15px;
     margin: 10px;
     background-color: #FF5722;
-    text-align: center;
+    max-width: 300px;
 }
 
 .fruit-banner img {
@@ -204,8 +208,10 @@ header a {
     text-align: center;
 }
 
-.fruit-facs {
+.fruit-facts {
     text-align: center;
+    max-width: 50%;
+    word-wrap: break-word;
 }
 
 footer {
