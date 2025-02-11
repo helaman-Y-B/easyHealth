@@ -186,6 +186,10 @@ header a {
     margin: auto;
 }
 
+.fruit-link {
+    text-decoration: none;
+}
+
 .fruit-banner {
     display: flex;
     flex-direction: column;
