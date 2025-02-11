@@ -5,7 +5,7 @@ export function createBlock(fruit) {
     const linkBlock = document.createElement("a");
     linkBlock.id = fruit.name;
     linkBlock.classList.add("fruit-link");
-    linkBlock.href = "./fruit-page/fruit.html";
+    linkBlock.href = "./src/fruit-page/fruit.html";
 
     // Create a div element and add the class fruit-banner to it
     const fruitBanner = document.createElement("div");
