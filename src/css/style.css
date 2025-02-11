@@ -186,13 +186,22 @@ header a {
     margin: auto;
 }
 
+.fruit-link {
+    text-decoration: none;
+}
+
 .fruit-banner {
+    display: flex;
+    flex-direction: column;
     flex: 1 1 calc(100% - 20px);
+    text-align: center;
+    align-items: center;
     box-sizing: border-box;
     padding: 15px;
     margin: 10px;
     background-color: #FF5722;
-    text-align: center;
+    min-width: 300px;
+    max-width: 500px;
 }
 
 .fruit-banner img {
@@ -204,8 +213,10 @@ header a {
     text-align: center;
 }
 
-.fruit-facs {
+.fruit-facts {
     text-align: center;
+    max-width: 50%;
+    word-wrap: break-word;
 }
 
 footer {
