@@ -15,7 +15,7 @@ export function createBlock(fruit, image) {
 
     // Create an image element and set the source to a placeholder image
     const img = document.createElement("img");
-    getImgUrl(fruit);
+    //getImgUrl(fruit);
     img.src = "https://placehold.co/150x100";
     img.alt = fruit.name;
     img.classList.add("center-image");
@@ -42,16 +42,16 @@ export function createBlock(fruit, image) {
     divFruit.appendChild(linkBlock);
 }
 
-export function getImgUrl(fruit) {
-    const res = fetch(`https://cors-anywhere.herokuapp.com/https://www.fruityvice.com/api/fruit/${fruit.name}/image`);
+//export function getImgUrl(fruit) {
+//const res = fetch(`https://api.allorigins.win/raw?url=https://www.fruityvice.com/api/fruit/${fruit.name}/image`);
 
-    console.log(res);
+//console.log(res);
 
-    if (!res.ok) {
-        throw new Error('Network response was not ok');
-    } else {
-        const data = res.json();
-        console.log(data);
-        return data;
-    }
-}
+//if (!res.ok) {
+//throw new Error('Network response was not ok');
+//} else {
+//const data = res.json();
+//console.log(data);
+//return data;
+//}
+//}
