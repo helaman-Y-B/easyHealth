@@ -1,6 +1,6 @@
 import { stringifyObject } from "./services.js";
 
-export function createBlock(fruit, image) {
+export function createBlock(fruit) {
     const divFruit = document.getElementById("catalog");
 
     // Create a link element and set the href attribute to the fruit's name
@@ -16,7 +16,7 @@ export function createBlock(fruit, image) {
     // Create an image element and set the source to a placeholder image
     const img = document.createElement("img");
     //getImgUrl(fruit);
-    img.src = "https://placehold.co/150x100";
+    img.src = "./public/img/fruits-img/" + fruit.name + ".jpeg";
     img.alt = fruit.name;
     img.classList.add("center-image");
 
