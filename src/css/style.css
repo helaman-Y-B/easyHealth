@@ -199,6 +199,7 @@ header a {
     box-sizing: border-box;
     padding: 15px;
     margin: 10px;
+    border-radius: 10px;
     background-color: #FF5722;
     min-width: 300px;
     max-width: 500px;
@@ -207,7 +208,8 @@ header a {
 .fruit-banner img {
     margin: auto;
     margin-bottom: 15px;
-    max-width: 270px;
+    max-width: 250px;
+    border-radius: 10px;
 }
 
 .fruit-header {
