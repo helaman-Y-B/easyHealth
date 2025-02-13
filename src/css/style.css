@@ -206,7 +206,8 @@ header a {
 
 .fruit-banner img {
     margin: auto;
-    max-width: 100%;
+    margin-bottom: 15px;
+    max-width: 270px;
 }
 
 .fruit-header {
