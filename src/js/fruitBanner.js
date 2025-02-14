@@ -56,7 +56,11 @@ export async function createFruitPage() {
         <img src="/img/fruits-img/${urlParam}.jpeg" alt="Fruit image" id="fruit-image" class="center-image">
         <div id="fruit-facts">
             <h3>FACS</h3>
-            <p>${fruitData.nutritions}</p>
+            <p>Calories: ${fruitData.nutritions.calories}</p>
+            <p>Carbohydrates: ${fruitData.nutritions.carbohydrates}</p>
+            <p>Fat: ${fruitData.nutritions.fat}</p>
+            <p>Protein: ${fruitData.nutritions.protein}</p>
+            <p>Sugar: ${fruitData.nutritions.sugar}</p>
         </div>
 
         <div class="quantity-box">
