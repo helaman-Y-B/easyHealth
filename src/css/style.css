@@ -140,7 +140,7 @@ header a {
 }
 
 .main-image #imgban3 {
-    background-image: url(../public/img/imgban3.jpeg);
+    background-image: url(/img/imgban3.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -150,7 +150,7 @@ header a {
 }
 
 .main-image #imgban2 {
-    background-image: url(../public/img/imgban2.jpeg);
+    background-image: url(/img/imgban2.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,7 +160,7 @@ header a {
 }
 
 .main-image #imgban1 {
-    background-image: url(../public/img/imgban1.jpeg);
+    background-image: url(/img/imgban1.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -186,10 +186,6 @@ header a {
     margin: auto;
 }
 
-.fruit-link {
-    text-decoration: none;
-}
-
 .fruit-banner {
     display: flex;
     flex-direction: column;
@@ -201,12 +197,10 @@ header a {
     margin: 10px;
     border-radius: 10px;
     background-color: #FF5722;
-    min-width: 300px;
-    max-width: 500px;
+    max-width: 280px;
 }
 
 .fruit-banner img {
-    margin: auto;
     margin-bottom: 15px;
     max-width: 250px;
     border-radius: 10px;

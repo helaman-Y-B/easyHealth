@@ -1,5 +1,3 @@
-//const urlImage = `https://www.fruityvice.com/api/fruit/${fruit.name}/image`;
-
 export async function getData(url) {
     const res = await fetch(url);
 
@@ -10,5 +8,3 @@ export async function getData(url) {
         return data;
     }
 }
-
-// Url tutorial: https://publicapis.io/fruity-vice-food-api

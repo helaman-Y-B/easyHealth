@@ -16,9 +16,7 @@ export function putFruitData(fruitData) {
 
     if (count < 10) {
         console.log(`Only ${count} fruits found, less than 10.`);
+    } else {
+        console.log(`${count} fruits displayed.`);
     }
-}
-
-export function selectedFruit(fruitData) {
-    
 }
