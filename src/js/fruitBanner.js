@@ -1,6 +1,7 @@
 import { stringifyObject } from "./services.js";
 import { sendToFruitPage } from "./eventListeners.js";
 import { getData } from "./getData.js";
+import { changeQuantity } from "./eventListeners.js";
 
 export function createBlock(fruit) {
     const divFruit = document.getElementById("catalog");
@@ -40,11 +41,13 @@ export function createBlock(fruit) {
 
 // Function to create the fruit banner in the fruit.html page
 export async function createFruitPage() {
+    const priceData = await getData("../json/fruitPrices.json");
+    console.log(priceData);
     // Get the fruit div element
     const divFruit = document.getElementById("fruit");
     // Get the fruit name from the URL
     const urlParam = new URLSearchParams(window.location.search).get('fruit');
-    // Store the API URL into a varable
+    // Store the API URL into a variable
     const fruitApi = `https://api.allorigins.win/raw?url=https://www.fruityvice.com/api/fruit/${urlParam}`;
     // Get the fruit data
     const fruitData = await getData(fruitApi);
@@ -61,13 +64,20 @@ export async function createFruitPage() {
             <p>Fat: ${fruitData.nutritions.fat}</p>
             <p>Protein: ${fruitData.nutritions.protein}</p>
             <p>Sugar: ${fruitData.nutritions.sugar}</p>
+            <p id="price">Price: $${priceData.find(fruit => fruit.name === urlParam)?.price || 'N/A'} per pound</p>
         </div>
 
         <div class="quantity-box">
-            <button class="decrease" onclick="changeQuantity(-1)">-</button>
             <input type="number" id="quantity" value="1" min="1">
-            <button class="increase" onclick="changeQuantity(1)">+</button>
+            <button class="decrease">-</button>
+            <button class="increase">+</button>
         </div>
-        <a href="../cart/cart.html"><button id="place-order">Put it to cart</button></a>
+        <p id="total-price">Total price: $${priceData.find(fruit => fruit.name === urlParam)?.price.toFixed(2) || 'N/A'}</p>
+        <a href="../cart/cart.html"><button id="place-order">Add to cart</button></a>
     `;
+    const decreaseButton = document.querySelector('.decrease');
+    const increaseButton = document.querySelector('.increase');
+
+    decreaseButton.addEventListener('click', () => changeQuantity(-1));
+    increaseButton.addEventListener('click', () => changeQuantity(1));
 }
