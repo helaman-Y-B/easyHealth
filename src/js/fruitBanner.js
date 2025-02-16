@@ -1,7 +1,7 @@
 import { stringifyObject } from "./services.js";
 import { sendToFruitPage } from "./eventListeners.js";
 import { getData } from "./getData.js";
-import { changeQuantity } from "./eventListeners.js";
+import { fruitBuyEvents } from "./eventListeners.js";
 
 export function createBlock(fruit) {
     const divFruit = document.getElementById("catalog");
@@ -72,12 +72,8 @@ export async function createFruitPage() {
             <button class="decrease">-</button>
             <button class="increase">+</button>
         </div>
-        <p id="total-price">Total price: $${priceData.find(fruit => fruit.name === urlParam)?.price.toFixed(2) || 'N/A'}</p>
-        <a href="../cart/cart.html"><button id="place-order">Add to cart</button></a>
+        <p id="total-price">Total price: $${(priceData.find(fruit => fruit.name === urlParam)?.price * 1).toFixed(2) || 'N/A'}</p>
+        <button id="place-order">Add to cart</button>
     `;
-    const decreaseButton = document.querySelector('.decrease');
-    const increaseButton = document.querySelector('.increase');
-
-    decreaseButton.addEventListener('click', () => changeQuantity(-1));
-    increaseButton.addEventListener('click', () => changeQuantity(1));
+    fruitBuyEvents();
 }
