@@ -11,29 +11,15 @@
 <body>
     <header>
         <div id="header-div">
-            <img id="favIcon" src="../public/img/easyHealthIcon.png" alt="logo">
+            <img id="favIcon" src="/img/easyHealthIcon.png" alt="logo">
             <h1>Easy Health</h1>
-            <a href="../favorite-page/favorites.html"><img id="wishlist-icon" src="../public/img/star.png"
+            <a href="../favorite-page/favorites.html"><img id="wishlist-icon" src="/img/star.png"
                     alt="wishlist icon"></a>
-            <a href="../cart/cart.html"><img id="cart-icon" src="../public/img/cart.png" alt="cart icon"></a>
+            <a href="../cart/cart.html"><img id="cart-icon" src="/img/cart.png" alt="cart icon"></a>
         </div>
     </header>
 
-    <div id="fruit">
-        <h2 class="fruit-header">Fruit Name</h2>
-        <img src="https://placehold.co/328x200" alt="Fruit image" id="fruit-image" class="center-image">
-        <div id="fruit-facts">
-            <h3>FACS</h3>
-            <p>This fruit is awesome because of...</p>
-        </div>
-
-        <div class="quantity-box">
-            <button class="decrease" onclick="changeQuantity(-1)">-</button>
-            <input type="number" id="quantity" value="1" min="1">
-            <button class="increase" onclick="changeQuantity(1)">+</button>
-        </div>
-        <a href="../cart/cart.html"><button id="place-order">Put it to cart</button></a>
-    </div>
+    <div id="fruit"></div>
 
 </body>
 <footer>
@@ -43,9 +29,14 @@
         <p>A BYU Project</p>
     </div>
     <div id="midia-footer">
-        <img class="midia-icon" src="../public/img/facebook.png" alt="Facebook logo">
-        <img class="midia-icon" src="../public/img/instagram.png" alt="Instagram logo">
+        <img class="media-icon" src="/img/facebook.png" alt="Facebook logo">
+        <img class="media-icon" src="/img/instagram.png" alt="Instagram logo">
     </div>
 </footer>
+<script type="module">
+    // Import the function that creates the fruit banner
+    import { createFruitPage } from '../js/fruitBanner.js';
+    createFruitPage();
+</script>
 
 </html>

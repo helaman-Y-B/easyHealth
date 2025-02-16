@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Banana",
+        "price": 0.62,
+        "quantity": 1
+    },
+    {
+        "name": "Blackberry",
+        "price": 5.99,
+        "quantity": 1
+    },
+    {
+        "name": "Durian",
+        "price": 5.00,
+        "quantity": 1
+    },
+    {
+        "name": "Kiwi",
+        "price": 0.50,
+        "quantity": 1
+    },
+    {
+        "name": "Lingonberry",
+        "price": 10.00,
+        "quantity": 1
+    },
+    {
+        "name": "Lychee",
+        "price": 3.00,
+        "quantity": 1
+    },
+    {
+        "name": "Pear",
+        "price": 1.00,
+        "quantity": 1
+    },
+    {
+        "name": "Persimmon",
+        "price": 2.00,
+        "quantity": 1
+    },
+    {
+        "name": "Strawberry",
+        "price": 3.00,
+        "quantity": 1
+    },
+    {
+        "name": "Tomato",
+        "price": 1.00,
+        "quantity": 1
+    }
+]

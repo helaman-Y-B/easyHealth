@@ -1,14 +1,10 @@
-// Currently, the API does not support CORS, so I am using a proxy to bypass this issue
-const url = "https://cors-anywhere.herokuapp.com/https://www.fruityvice.com/api/fruit/all";
-
-export async function getFruits() {
+export async function getData(url) {
     const res = await fetch(url);
 
     if (!res.ok) {
         throw new Error('Network response was not ok');
     } else {
-        return await res.json();
+        const data = await res.json();
+        return data;
     }
 }
-
-// Url tutorial: https://publicapis.io/fruity-vice-food-api
