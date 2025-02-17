@@ -51,7 +51,6 @@ export async function createFruitPage() {
     const fruitApi = `https://api.allorigins.win/raw?url=https://www.fruityvice.com/api/fruit/${urlParam}`;
     // Get the fruit data
     const fruitData = await getData(fruitApi);
-    console.log(fruitData);
 
     // Set the innerHTML of the divFruit element to show the selected fruit from index.html
     divFruit.innerHTML = `
@@ -76,4 +75,19 @@ export async function createFruitPage() {
         <button id="place-order">Add to cart</button>
     `;
     fruitBuyEvents();
+}
+
+export async function createFruitCart(fruitData) {
+    const cart = document.getElementById("cart-list");
+
+    const fruitDiv = document.createElement("div")
+    fruitDiv.classList.add("products");
+
+    fruitDiv.innerHTML = `
+        <img class="fruit-img" src="https://placehold.co/100x100" alt="Fruit image">
+        <h3 class="fruit-name">${fruitData.fruit}</h3>
+        <p class="fruit-quantity">QTY: ${fruitData.quantity}</p>
+        <p class="fruit-price">Price: $${fruitData.totalPrice.toFixed(2)}</p>`
+
+    cart.appendChild(fruitDiv);
 }

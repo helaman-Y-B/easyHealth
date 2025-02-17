@@ -1,6 +1,11 @@
 import { getData } from "./getData.js";
 import { addFruitToCart } from "./services.js";
 
+export function cartIconEvent() {
+  const cartBtn = document.getElementById("cart-icon");
+  cartBtn.addEventListener("click", window.location.pathname = "/cart/cart.html");
+}
+
 // An event listener that sends the user to the fruit page when a fruit is clicked
 // The function takes the fruit as an argument
 export function sendToFruitPage(fruit) {
