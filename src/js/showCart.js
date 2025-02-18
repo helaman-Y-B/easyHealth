@@ -19,4 +19,4 @@ export async function showCart() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', showCart);
+document.addEventListener("DOMContentLoaded", showCart);
