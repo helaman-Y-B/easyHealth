@@ -1,4 +1,4 @@
-import { createBlock } from './fruitBanner.js';
+import { createBlock } from "./fruitBanner.js";
 
 export function putFruitData(fruitData) {
 
@@ -12,11 +12,4 @@ export function putFruitData(fruitData) {
             count++;
         }
     });
-
-
-    if (count < 10) {
-        console.log(`Only ${count} fruits found, less than 10.`);
-    } else {
-        console.log(`${count} fruits displayed.`);
-    }
 }

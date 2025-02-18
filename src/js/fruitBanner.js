@@ -42,16 +42,14 @@ export function createBlock(fruit) {
 // Function to create the fruit banner in the fruit.html page
 export async function createFruitPage() {
     const priceData = await getData("../json/fruitPrices.json");
-    console.log(priceData);
     // Get the fruit div element
     const divFruit = document.getElementById("fruit");
     // Get the fruit name from the URL
-    const urlParam = new URLSearchParams(window.location.search).get('fruit');
+    const urlParam = new URLSearchParams(window.location.search).get("fruit");
     // Store the API URL into a variable
     const fruitApi = `https://api.allorigins.win/raw?url=https://www.fruityvice.com/api/fruit/${urlParam}`;
     // Get the fruit data
     const fruitData = await getData(fruitApi);
-    console.log(fruitData);
 
     // Set the innerHTML of the divFruit element to show the selected fruit from index.html
     divFruit.innerHTML = `
@@ -64,7 +62,7 @@ export async function createFruitPage() {
             <p>Fat: ${fruitData.nutritions.fat}</p>
             <p>Protein: ${fruitData.nutritions.protein}</p>
             <p>Sugar: ${fruitData.nutritions.sugar}</p>
-            <p id="price">Price: $${priceData.find(fruit => fruit.name === urlParam)?.price || 'N/A'} per pound</p>
+            <p id="price">Price: $${priceData.find(fruit => fruit.name === urlParam)?.price || "N/A"} per pound</p>
         </div>
 
         <div class="quantity-box">
@@ -72,8 +70,26 @@ export async function createFruitPage() {
             <button class="decrease">-</button>
             <button class="increase">+</button>
         </div>
-        <p id="total-price">Total price: $${(priceData.find(fruit => fruit.name === urlParam)?.price * 1).toFixed(2) || 'N/A'}</p>
+        <p id="total-price">Total price: $${(priceData.find(fruit => fruit.name === urlParam)?.price * 1).toFixed(2) || "N/A"}</p>
         <button id="place-order">Add to cart</button>
     `;
     fruitBuyEvents();
+}
+
+export async function createFruitCart(fruitData) {
+    const cart = document.getElementById("cart-list");
+
+    const fruitDiv = document.createElement("div")
+    fruitDiv.classList.add("products");
+
+    fruitDiv.innerHTML = `
+        <img class="fruit-img" src="/img/fruits-img/${fruitData.fruit}.jpeg" alt="Fruit image">
+        <h3 class="fruit-name">${fruitData.fruit}</h3>
+        <div class="quantity-price">
+        <p class="fruit-quantity">QTY: ${fruitData.quantity} Pounds</p>
+        <p class="fruit-price">Price: $${fruitData.totalPrice.toFixed(2)}</p>
+        </div>
+        `
+
+    cart.appendChild(fruitDiv);
 }

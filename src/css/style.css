@@ -140,7 +140,7 @@ header a {
 }
 
 .main-image #imgban3 {
-    background-image: url(./img/imgban3.jpeg);
+    background-image: url(/img/imgban3.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -150,7 +150,7 @@ header a {
 }
 
 .main-image #imgban2 {
-    background-image: url(./img/imgban2.jpeg);
+    background-image: url(/img/imgban2.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,7 +160,7 @@ header a {
 }
 
 .main-image #imgban1 {
-    background-image: url(./img/imgban1.jpeg);
+    background-image: url(/img/imgban1.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -333,7 +333,8 @@ quantity-box button {
 }
 
 #cart-list {
-    max-width: 1000px;
+    max-width: 500px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -347,6 +348,19 @@ quantity-box button {
     align-items: center;
 }
 
+.fruit-img {
+    max-width: 100px;
+    margin-right: 10px;
+}
+
+.fruit-name {
+    margin-right: 10px;
+}
+
+.quantity-price {
+    margin: 10px;
+}
+
 #price-info {
     padding: 2vw;
 }
@@ -354,9 +368,18 @@ quantity-box button {
 #buy-button {
     background-color: #009688;
     width: 80vw;
-    max-width: 600px;
+    max-width: 400px;
     padding: 15px;
     margin: 25px auto 25px auto;
+    text-align: center;
+    text-decoration: none;
+    color: #263238;
+    font-family: "PT Sans", serif;
+    border-radius: 10px;
+}
+
+#buy-button:hover {
+    background-color: #FF5722;
 }
 
 /*buy-form CSS page*/

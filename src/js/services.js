@@ -26,7 +26,7 @@ export async function addFruitToCart(urlParam) {
     if (!Array.isArray(cart)) {
         cart = [];
     }
-    const quantity = document.getElementById('quantity').value;
+    const quantity = document.getElementById("quantity").value;
     const totalPrice = priceData.find(fruit => fruit.name === urlParam)?.price * (1).toFixed(2);
     const fruitName = urlParam;
     cart.push({ fruit: fruitName, quantity, totalPrice });
