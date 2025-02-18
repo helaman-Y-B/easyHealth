@@ -84,10 +84,13 @@ export async function createFruitCart(fruitData) {
     fruitDiv.classList.add("products");
 
     fruitDiv.innerHTML = `
-        <img class="fruit-img" src="https://placehold.co/100x100" alt="Fruit image">
+        <img class="fruit-img" src="/img/fruits-img/${fruitData.fruit}.jpeg" alt="Fruit image">
         <h3 class="fruit-name">${fruitData.fruit}</h3>
-        <p class="fruit-quantity">QTY: ${fruitData.quantity}</p>
-        <p class="fruit-price">Price: $${fruitData.totalPrice.toFixed(2)}</p>`
+        <div class="quantity-price">
+        <p class="fruit-quantity">QTY: ${fruitData.quantity} Pounds</p>
+        <p class="fruit-price">Price: $${fruitData.totalPrice.toFixed(2)}</p>
+        </div>
+        `
 
     cart.appendChild(fruitDiv);
 }
