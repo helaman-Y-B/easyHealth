@@ -120,3 +120,10 @@ export function formValidation() {
 
   return isValid;
 }
+
+export function logoEvent() {
+  const logoLink = document.getElementById("favIcon");
+  logoLink.addEventListener("click", () => {
+    window.location.pathname = "/src/";
+  });
+}
