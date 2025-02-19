@@ -27,7 +27,7 @@ export async function addFruitToCart(urlParam) {
         cart = [];
     }
     const quantity = document.getElementById("quantity").value;
-    const totalPrice = priceData.find(fruit => fruit.name === urlParam)?.price * (1).toFixed(2);
+    const totalPrice = priceData.find(fruit => fruit.name === urlParam)?.price * parseFloat(quantity).toFixed(2);
     const fruitName = urlParam;
     cart.push({ fruit: fruitName, quantity, totalPrice });
     setlocalStorage("cart", cart);

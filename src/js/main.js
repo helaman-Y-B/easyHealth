@@ -14,7 +14,8 @@ async function fetchAndDisplayFruitData() {
         const fruitData = await getData(urlFruit);
         putFruitData(fruitData);
     } catch (error) {
-        console.error("Error fetching fruit data:", error);
+        throw new Error("Error fetching fruit data:", error);
+
     }
 }
 
