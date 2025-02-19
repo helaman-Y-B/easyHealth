@@ -19,7 +19,7 @@ export function sendToFruitPage(fruit) {
       window.location.href = `fruit-page/fruit.html?${urlParam}`;
     });
   } else {
-    console.error(`Element with id ${fruit.name} not found.`);
+    throw new Error(`Element with id ${fruit.name} not found.`);
   }
 }
 
@@ -39,7 +39,7 @@ export async function changeQuantity(changeBy) {
     quantity.value--;
     totalPrice.innerHTML = `Total price: $${(quantity.value * priceData.find(fruit => fruit.name === urlParam)?.price).toFixed(2)}`;
   } else {
-    console.error("Quantity cannot be less than 1");
+    throw new Error("Quantity cannot be less than 1");
   }
 }
 
