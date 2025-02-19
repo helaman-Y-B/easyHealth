@@ -11,44 +11,52 @@
 <body>
     <header>
         <div id="header-div">
-            <img id="favIcon" src="../public/img/easyHealthIcon.png" alt="logo">
+            <a href="./index.html"><img id="favIcon" src="/img/easyHealthIcon.png" alt="logo"></a>
             <h1>Easy Health</h1>
-            <a href="../favorite-page/favorites.html"><img id="wishlist-icon" src="../public/img/star.png"
+            <a href="../favorite-page/favorites.html"><img id="wishlist-icon" src="/img/star.png"
                     alt="wishlist icon"></a>
-            <a href="../cart/cart.html"><img id="cart-icon" src="../public/img/cart.png" alt="cart icon"></a>
+            <a href="../cart/cart.html"><img id="cart-icon" src="/img/cart.png" alt="cart icon"></a>
         </div>
     </header>
     <div id="submit-form">
-        <form action="" target="_blank" method="post">
+        <form id="order-form" action="" target="_blank" method="post">
             <fieldset>
-                <legend>Name:</legend>
+                <legend><strong>Name:</strong></legend>
                 <label for="fname">First Name:</label><br>
                 <input type="text" id="fname" name="fname" required><br>
                 <label for="lname">Last Name:</label><br>
                 <input type="text" id="lname" name="lname" required><br>
+                <strong>
+                    <p id="name-error" class="error-message"></p>
+                </strong>
             </fieldset>
             <fieldset>
-                <legend>Address:</legend>
+                <legend><strong>Address:</strong></legend>
                 <label for="state">State:</label><br>
                 <input type="text" id="state" name="state" required><br>
                 <label for="street">Street:</label><br>
                 <input type="text" id="street" name="street" required><br>
                 <label for="zip">ZIP Code:</label><br>
                 <input type="text" id="zip" name="zip" required><br>
+                <strong>
+                    <p id="address-error" class="error-message"></p>
+                </strong>
             </fieldset>
             <fieldset>
-                <legend>Card Information:</legend>
+                <legend><strong>Card Information:</strong></legend>
                 <label for="card-num">Card Number:</label><br>
                 <input type="text" id="card-num" name="card-num" required><br>
                 <label for="expiration">Expiration Date:</label><br>
                 <input type="text" id="expiration" name="expiration" required><br>
                 <label for="ccv">CCV:</label><br>
                 <input type="text" id="ccv" name="ccv" required><br>
+                <strong>
+                    <p id="card-error" class="error-message"></p>
+                </strong>
             </fieldset>
         </form>
-        <button id="buy-btn" type="button" onclick="alert('Order Submitted')">Place Order</button>
+        <button id="buy-btn" type="button">Place Order</button>
     </div>
-
 
 </body>
 <footer>
@@ -58,9 +66,10 @@
         <p>A BYU Project</p>
     </div>
     <div id="midia-footer">
-        <img class="midia-icon" src="../public/img/facebook.png" alt="Facebook logo">
-        <img class="midia-icon" src="../public/img/instagram.png" alt="Instagram logo">
+        <img class="media-icon" src="/img/facebook.png" alt="Facebook logo">
+        <img class="media-icon" src="/img/instagram.png" alt="Instagram logo">
     </div>
 </footer>
+<script type="module" src="../js/submitFrom.js"></script>
 
 </html>
