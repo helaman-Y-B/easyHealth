@@ -63,3 +63,60 @@ export function fruitBuyEvents() {
     addFruitToCart(urlParam);
   });
 }
+
+export function formValidation() {
+  const fname = document.getElementById("fname");
+  const lname = document.getElementById("lname");
+  const zipCode = document.getElementById("zip");
+  const cardNum = document.getElementById("card-num");
+  const ex = document.getElementById("expiration");
+  const ccv = document.getElementById("ccv");
+
+  const nameError = document.getElementById("name-error");
+  const addressError = document.getElementById("address-error");
+  const cardError = document.getElementById("card-error");
+
+  const nameRegex = /^[a-zA-Z]+$/;
+  const zipRegex = /^\d{5}$/;
+  const cardNumRegex = /^\d{16}$/;
+  const expirationRegex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+  const ccvRegex = /^\d{3}$/;
+
+  let isValid = true;
+
+  nameError.textContent = "";
+  addressError.textContent = "";
+  cardError.textContent = "";
+
+  if (!nameRegex.test(fname.value)) {
+    nameError.textContent = "First name is invalid. Only letters are allowed.";
+    isValid = false;
+  }
+
+  if (!nameRegex.test(lname.value)) {
+    nameError.textContent += " Last name is invalid. Only letters are allowed.";
+    isValid = false;
+  }
+
+  if (!zipRegex.test(zipCode.value)) {
+    addressError.textContent = "ZIP code is invalid. It should be a 5-digit number.";
+    isValid = false;
+  }
+
+  if (!cardNumRegex.test(cardNum.value)) {
+    cardError.textContent = "Card number is invalid. It should be a 16-digit number.";
+    isValid = false;
+  }
+
+  if (!expirationRegex.test(ex.value)) {
+    cardError.textContent += " Expiration date is invalid. It should be in MM/YY format.";
+    isValid = false;
+  }
+
+  if (!ccvRegex.test(ccv.value)) {
+    cardError.textContent += " CCV is invalid. It should be a 3-digit number.";
+    isValid = false;
+  }
+
+  return isValid;
+}
