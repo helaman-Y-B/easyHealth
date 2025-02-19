@@ -399,6 +399,7 @@ form {
 fieldset {
     background-color: #009688;
     border-radius: 10px;
+    padding: 10px;
 }
 
 input {
