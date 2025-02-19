@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
     root: "src/",
@@ -16,4 +17,14 @@ export default defineConfig({
             },
         },
     },
+    plugins: [
+        viteStaticCopy({
+            targets: [
+                {
+                    scr: "src/json/fruitPrices.json",
+                    dest: "json"
+                }
+            ]
+        })
+    ]
 });
