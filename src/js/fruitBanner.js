@@ -41,7 +41,7 @@ export function createBlock(fruit) {
 
 // Function to create the fruit banner in the fruit.html page
 export async function createFruitPage() {
-    const priceData = await getData("../json/fruitPrices.json");
+    const priceData = await getData("/json/fruitPrices.json");
     // Get the fruit div element
     const divFruit = document.getElementById("fruit");
     // Get the fruit name from the URL
