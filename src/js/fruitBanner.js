@@ -1,7 +1,7 @@
 import { stringifyObject } from "./services.js";
 import { sendToFruitPage } from "./eventListeners.js";
 import { getData } from "./getData.js";
-import { fruitBuyEvents } from "./eventListeners.js";
+import { fruitBuyEvents, wishListEvent } from "./eventListeners.js";
 
 export function createBlock(fruit) {
     const divFruit = document.getElementById("catalog");
@@ -71,8 +71,12 @@ export async function createFruitPage() {
             <button class="increase">+</button>
         </div>
         <p id="total-price">Total price: $${(priceData.find(fruit => fruit.name === urlParam)?.price * 1).toFixed(2) || "N/A"}</p>
-        <button id="place-order">Add to cart</button>
+        <div id="place-wish">
+            <button id="place-order">Add to cart</button>
+            <img alt="empty-star" id="wish" src="../public/img/empty-star.png">
+        </div>
     `;
+    wishListEvent();
     fruitBuyEvents();
 }
 

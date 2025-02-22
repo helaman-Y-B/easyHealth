@@ -277,13 +277,6 @@ footer {
     margin: 5px;
 }
 
-#place-order {
-    background-color: #FF5722;
-    min-width: 328px;
-    padding: 15px;
-    margin: 25px auto 25px auto;
-}
-
 .center-image {
     display: block;
     margin-left: auto;
@@ -321,6 +314,27 @@ quantity-box button {
     width: 40px;
     height: 30px;
 }
+
+#place-order {
+    background-color: #FF5722;
+    min-width: 280px;
+    padding: 15px;
+    margin: 25px auto 25px auto;
+}
+
+#place-wish {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#wish {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+
 
 /*Cart CSS page*/
 

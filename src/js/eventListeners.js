@@ -1,5 +1,5 @@
 import { getData } from "./getData.js";
-import { addFruitToCart } from "./services.js";
+import { addFruitToCart, setlocalStorage, addFruitToWish } from "./services.js";
 
 export function cartIconEvent() {
   const cartBtn = document.getElementById("cart-icon");
@@ -61,5 +61,28 @@ export function fruitBuyEvents() {
   // Add event listener to the button
   placeOrderBtn.addEventListener("click", () => {
     addFruitToCart(urlParam);
+  });
+}
+
+export function wishListEvent() {
+  const wishBtn = document.getElementById("wish");
+  wishBtn.addEventListener("click", () => {
+    const urlParam = new URLSearchParams(window.location.search).get("fruit");
+    addFruitToWish(urlParam);
+
+    document.getElementById("wish").src = "../public/img/star.png";
+
+    //divFruit.innerHTML = `
+    //<h2 class="fruit-header">${urlParam}</h2>
+        //<img src="/img/fruits-img/${urlParam}.jpeg" alt="Fruit image" id="fruit-image" class="center-image">
+        //<div id="fruit-facts">
+           // <h3>FACS</h3>
+           // <p>Calories: ${fruitData.nutritions.calories}</p>
+           // <p>Carbohydrates: ${fruitData.nutritions.carbohydrates}</p>
+           // <p>Fat: ${fruitData.nutritions.fat}</p>
+           // <p>Protein: ${fruitData.nutritions.protein}</p>
+           // <p>Sugar: ${fruitData.nutritions.sugar}</p>
+           // <p id="price">Price: $${priceData.find(fruit => fruit.name === urlParam)?.price || "N/A"} per pound</p>
+       // </div>
   });
 }

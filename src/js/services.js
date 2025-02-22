@@ -34,3 +34,15 @@ export async function addFruitToCart(urlParam) {
     alert(`Successfully added ${quantity} ${fruitName} to your cart!`);
 }
 
+export async function addFruitToWish(fruitName) {
+    
+    if (getlocalStorage("wish") === null) {
+        const wishList = []
+        setlocalStorage("wishList", wishList)
+    } else {
+        const wishList = getlocalStorage("wishList");
+        wishList.push({ fruit: fruitName });
+        setlocalStorage("wishList", wishList);
+    }
+}
+
