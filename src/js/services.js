@@ -36,13 +36,9 @@ export async function addFruitToCart(urlParam) {
 
 export async function addFruitToWish(fruitName) {
     
-    if (getlocalStorage("wish") === null) {
-        const wishList = []
-        setlocalStorage("wishList", wishList)
-    } else {
-        const wishList = getlocalStorage("wishList");
-        wishList.push({ fruit: fruitName });
-        setlocalStorage("wishList", wishList);
-    }
+    const wishList = getlocalStorage("wishList");
+    wishList.push({ fruit: fruitName });
+    setlocalStorage("wishList", wishList);
+    
 }
 
