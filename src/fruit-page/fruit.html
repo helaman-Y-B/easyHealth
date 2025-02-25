@@ -22,20 +22,14 @@
     <div id="fruit"></div>
 
 </body>
-<footer>
-    <div id="author-footer">
-        <p>Author: Helamã Y. Barbour</p>
-        <p>&copy;NOT a real business</p>
-        <p>A BYU Project</p>
-    </div>
-    <div id="midia-footer">
-        <img class="media-icon" src="/img/facebook.png" alt="Facebook logo">
-        <img class="media-icon" src="/img/instagram.png" alt="Instagram logo">
-    </div>
+<footer id="footer">
 </footer>
 <script type="module">
     // Import the function that creates the fruit banner
     import { createFruitPage } from '../js/fruitBanner.js';
+    import { loadHeaderAndFooter } from "./headerFooter.js";
+
+    loadHeaderAndFooter()
     createFruitPage();
 </script>
 

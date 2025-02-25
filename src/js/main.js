@@ -1,7 +1,9 @@
 import { functionBannerLoop } from "./cssAnimation.js";
 import { getData } from "./getData.js";
 import { putFruitData } from "./showFruit.js";
-import { setlocalStorage } from "./services.js";
+import { loadHeaderAndFooter } from "./headerFooter.js";
+
+loadHeaderAndFooter()
 
 // Currently, the API does not support CORS, so I am using a proxy to bypass this issue
 const urlFruit = "https://api.allorigins.win/raw?url=https://www.fruityvice.com/api/fruit/all";

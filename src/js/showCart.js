@@ -1,5 +1,8 @@
 import { getlocalStorage, setlocalStorage } from "./services";
 import { createFruitCart } from "./fruitBanner"
+import { loadHeaderAndFooter } from "./headerFooter.js";
+
+loadHeaderAndFooter()
 
 export async function showCart() {
     const cartInLocal = getlocalStorage("cart");
