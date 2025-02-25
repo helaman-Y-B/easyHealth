@@ -334,6 +334,11 @@ quantity-box button {
     margin: 10px;
 }
 
+#wished {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
 
 
 /*Cart CSS page*/

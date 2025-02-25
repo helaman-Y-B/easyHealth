@@ -1,5 +1,5 @@
 import { getData } from "./getData.js";
-import { addFruitToCart, setlocalStorage, addFruitToWish, getlocalStorage } from "./services.js";
+import { addFruitToCart, setlocalStorage, addFruitToWish, getlocalStorage, removeLocalStorage } from "./services.js";
 
 export function cartIconEvent() {
   const cartBtn = document.getElementById("cart-icon");
@@ -76,6 +76,28 @@ export function wishListEvent() {
     } else {
       addFruitToWish(urlParam);
     }
-    document.getElementById("wish").src = "../public/img/star.png";
+
+    wishBtn.src = "/img/star.png";
+    wishBtn.id = "wished";
+    const wishedBtn = document.getElementById("wished");
+
+    //This event is to unwish a fruit.
+    wishedBtn.addEventListener("click", () => {
+      if (wishedBtn.id === "wished"){
+        const wishList = getlocalStorage("wishList");
+
+        for (let i = 0; i < wishList.length; i++) {
+          if (wishList[i] === null) {
+            console.error("Fruit Item doesn't exist");
+          } else if (wishList[i].fruit === urlParam){
+            delete wishList[i];
+          };
+        };
+      setlocalStorage("wishList", wishList);
+      wishedBtn.src = "/img/empty-star.png";
+      wishedBtn.id = "wish";
+      wishListEvent();
+      };
+    });
   });
 }
