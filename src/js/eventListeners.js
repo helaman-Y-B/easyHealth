@@ -64,24 +64,38 @@ export function fruitBuyEvents() {
   });
 }
 
-export async function wishListEvent() {
+// Add events to the wish button
+export function wishListEvent() {
   const urlParam = new URLSearchParams(window.location.search).get("fruit");
+
+  // event listener for when the wish button is not active (empty star)
   const wishBtn = document.getElementById("wish");
+
+  // Identify if the wish button is active or not
   if (wishBtn !== null) {
     wishBtn.addEventListener("click", () => {
-  
+
+      // If wishList in localStorage is empty or if therre is no wishList
       if (getlocalStorage("wishList") === null) {
+
+        // Create the wishList and add the wished fruit
         const wishArray = []
         setlocalStorage("wishList", wishArray)
         addFruitToWish(urlParam);
+
+      // If the wishList exists, add wished fruit
       } else {
         addFruitToWish(urlParam);
       }
-  
+      
+      // Then change the button so that it become active(full star)
       wishBtn.src = "/img/star.png";
       wishBtn.id = "wished";
     });
+
+  // If there's isin't a btn with the id of "wish", do the following
   } else {
+    
     //This event is to unwish a fruit.
     const wishedBtn = document.getElementById("wished");
     wishedBtn.addEventListener("click", () => {
