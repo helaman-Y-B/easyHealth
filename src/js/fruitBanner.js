@@ -1,4 +1,4 @@
-import { stringifyObject } from "./services.js";
+import { getlocalStorage, stringifyObject } from "./services.js";
 import { sendToFruitPage } from "./eventListeners.js";
 import { getData } from "./getData.js";
 import { fruitBuyEvents, wishListEvent } from "./eventListeners.js";
@@ -73,11 +73,29 @@ export async function createFruitPage() {
         <p id="total-price">Total price: $${(priceData.find(fruit => fruit.name === urlParam)?.price * 1).toFixed(2) || "N/A"}</p>
         <div id="place-wish">
             <button id="place-order">Add to cart</button>
-            <img alt="empty-star" id="wish" src="../public/img/empty-star.png">
+            <img alt="empty-star" id="wish" src="">
         </div>
     `;
+    identifyFav(urlParam)
     wishListEvent();
     fruitBuyEvents();
+}
+
+// A funciton to identify when a fruit is already in the wish list.
+async function identifyFav(urlParam) {
+    const wishBtn = document.getElementById("wish")
+    let favList = getlocalStorage("wishList");
+    for (let i = 0; i < favList.length; i++) {
+        if (favList[i].fruit === urlParam) {
+            wishBtn.src = "/img/star.png";
+            wishBtn.id = "wished";
+            wishBtn.alt = "full-star";
+        } else {
+            wishBtn.src = "/img/empty-star.png";
+            wishBtn.id = "wish";
+            wishBtn.alt = "empty-star";
+        }
+    }
 }
 
 export async function createFruitCart(fruitData) {

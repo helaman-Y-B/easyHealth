@@ -9,14 +9,7 @@
 </head>
 
 <body>
-    <header>
-        <div id="header-div">
-            <img id="favIcon" src="/img/easyHealthIcon.png" alt="logo">
-            <h1>Easy Health</h1>
-            <a href="../favorite-page/favorites.html"><img id="wishlist-icon" src="/img/star.png"
-                    alt="wishlist icon"></a>
-            <a href="../cart/cart.html"><img id="cart-icon" src="/img/cart.png" alt="cart icon"></a>
-        </div>
+    <header id="header">
     </header>
 
     <div id="fruit"></div>
@@ -27,9 +20,10 @@
 <script type="module">
     // Import the function that creates the fruit banner
     import { createFruitPage } from '../js/fruitBanner.js';
-    import { loadHeaderAndFooter } from "./headerFooter.js";
+    import { loadHeaderAndFooter } from "../js/headerFooter.js";
 
-    loadHeaderAndFooter()
+    loadHeaderAndFooter();
+    
     createFruitPage();
 </script>
 

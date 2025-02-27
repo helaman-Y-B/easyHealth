@@ -64,24 +64,26 @@ export function fruitBuyEvents() {
   });
 }
 
-export function wishListEvent() {
+export async function wishListEvent() {
+  const urlParam = new URLSearchParams(window.location.search).get("fruit");
   const wishBtn = document.getElementById("wish");
-  wishBtn.addEventListener("click", () => {
-    const urlParam = new URLSearchParams(window.location.search).get("fruit");
-
-    if (getlocalStorage("wishList") === null) {
-      const wishArray = []
-      setlocalStorage("wishList", wishArray)
-      addFruitToWish(urlParam);
-    } else {
-      addFruitToWish(urlParam);
-    }
-
-    wishBtn.src = "/img/star.png";
-    wishBtn.id = "wished";
-    const wishedBtn = document.getElementById("wished");
-
+  if (wishBtn !== null) {
+    wishBtn.addEventListener("click", () => {
+  
+      if (getlocalStorage("wishList") === null) {
+        const wishArray = []
+        setlocalStorage("wishList", wishArray)
+        addFruitToWish(urlParam);
+      } else {
+        addFruitToWish(urlParam);
+      }
+  
+      wishBtn.src = "/img/star.png";
+      wishBtn.id = "wished";
+    });
+  } else {
     //This event is to unwish a fruit.
+    const wishedBtn = document.getElementById("wished");
     wishedBtn.addEventListener("click", () => {
       if (wishedBtn.id === "wished"){
         const wishList = getlocalStorage("wishList");
@@ -99,5 +101,5 @@ export function wishListEvent() {
       wishListEvent();
       };
     });
-  });
+  }
 }
